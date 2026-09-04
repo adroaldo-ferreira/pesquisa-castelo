@@ -1,0 +1,80 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4 p-md-5">
+          <h1 class="h3 text-center mb-4">Cadastro de pesquisa</h1>
+
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="jogoOnlineFavorito" class="form-label">Jogo online favorito</label>
+                <input id="jogoOnlineFavorito" name="jogoOnlineFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.jogoOnlineFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="esporteFavorito" class="form-label">Esporte favorito</label>
+                <input id="esporteFavorito" name="esporteFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.esporteFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="viagemDosSonhos" class="form-label">Viagem dos sonhos</label>
+                <input id="viagemDosSonhos" name="viagemDosSonhos" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.viagemDosSonhos">
+              </div>
+              <div class="col-md-6">
+                <label for="memeFavorito" class="form-label">Meme favorito</label>
+                <input id="memeFavorito" name="memeFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.memeFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="calcadoFavorito" class="form-label">Calçado favorito</label>
+                <input id="calcadoFavorito" name="calcadoFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.calcadoFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="cantorFavorito" class="form-label">Cantor favorito</label>
+                <input id="cantorFavorito" name="cantorFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.cantorFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="jogadorFavorito" class="form-label">Jogador favorito</label>
+                <input id="jogadorFavorito" name="jogadorFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.jogadorFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="filmeFavorito" class="form-label">Filme favorito</label>
+                <input id="filmeFavorito" name="filmeFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.filmeFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="materiaPreferida" class="form-label">Matéria preferida</label>
+                <input id="materiaPreferida" name="materiaPreferida" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.materiaPreferida">
+              </div>
+              <div class="col-md-6">
+                <label for="lugarFavorito" class="form-label">Lugar favorito</label>
+                <input id="lugarFavorito" name="lugarFavorito" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.lugarFavorito">
+              </div>
+              <div class="col-md-6">
+                <label for="marcaPreferida" class="form-label">Marca preferida</label>
+                <input id="marcaPreferida" name="marcaPreferida" type="text" class="form-control" required
+                  [(ngModel)]="cadastro.marcaPreferida">
+              </div>
+              <div class="col-md-6">
+                <label for="horasSono" class="form-label">Horas de sono</label>
+                <input id="horasSono" name="horasSono" type="number" min="0" max="24" class="form-control" required
+                  [(ngModel)]="cadastro.horasSono">
+              </div>
+              <div class="col-12 d-grid mt-4">
+                <button type="submit" class="btn btn-primary" (click)="salvarPesquisa()">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

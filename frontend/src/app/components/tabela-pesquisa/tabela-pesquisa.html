@@ -1,0 +1,49 @@
+<div class="container">
+  <h2 class="mb-4">Tabela de Pesquisa</h2>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Jogo</th>
+        <th scope="col">Esporte</th>
+        <th scope="col">Viagem</th>
+        <th scope="col">Meme</th>
+        <th scope="col">Calçado</th>
+        <th scope="col">Cantor</th>
+        <th scope="col">Jogador</th>
+        <th scope="col">Filme</th>
+        <th scope="col">Matéria</th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Sono</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tbody>
+      @for (cat of pesquisaPage.content; track cat.id) {
+      <tr>
+        <td class="text-muted">{{cat.id}}</td>
+        <td class="fw-medium">{{cat.jogoOnlineFavorito}}</td>
+        <td class="text-muted">{{cat.esporteFavorito}}</td>
+        <td class="text-muted">{{cat.viagemDosSonhos}}</td>
+        <td class="text-muted">{{cat.memeFavorito}}</td>
+        <td class="text-muted">{{cat.calcadoFavorito}}</td>
+        <td class="text-muted">{{cat.cantorFavorito}}</td>
+        <td class="text-muted">{{cat.jogadorFavorito}}</td>
+        <td class="text-muted">{{cat.filmeFavorito}}</td>
+        <td class="text-muted">{{cat.materiaPreferida}}</td>
+        <td class="text-muted">{{cat.lugarFavorito}}</td>
+        <td class="text-muted">{{cat.marcaPreferida}}</td>
+        <td class="text-muted">{{cat.horasSono}}</td>
+      </tr>
+      } @empty {
+      <tr>
+        <td colspan="4" class="text-center py-5 text-muted">Nenhuma categoria</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <div class="card-footer bg-white text-muted small">
+    Página {{pesquisaPage.page.number + 1}} de {{pesquisaPage.page.totalPages || 1}}
+  </div>
+</div>
