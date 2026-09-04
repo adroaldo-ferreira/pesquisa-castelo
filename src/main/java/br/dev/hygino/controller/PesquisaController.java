@@ -40,62 +40,62 @@ public class PesquisaController {
 		return ResponseEntity.ok(service.buscarTodas());
 	}
 
-	@GetMapping("/estatisticas/jogos")
+	@GetMapping("/jogos")
 	public List<EstatisticaDto> contarJogosOnline() {
 		return repository.contarJogosOnline();
 	}
 
-	@GetMapping("/estatisticas/esportes")
+	@GetMapping("/esportes")
 	public List<EstatisticaDto> contarEsportes() {
 		return repository.contarEsportes();
 	}
 
-	@GetMapping("/estatisticas/viagens")
+	@GetMapping("/viagens")
 	public List<EstatisticaDto> contarViagens() {
 		return repository.contarViagens();
 	}
 
-	@GetMapping("/estatisticas/memes")
+	@GetMapping("/meme")
 	public List<EstatisticaDto> contarMemes() {
 		return repository.contarMemes();
 	}
 
-	@GetMapping("/estatisticas/calcados")
+	@GetMapping("/calcados")
 	public List<EstatisticaDto> contarCalcados() {
 		return repository.contarCalcados();
 	}
 
-	@GetMapping("/estatisticas/cantores")
+	@GetMapping("/cantores")
 	public List<EstatisticaDto> contarCantores() {
 		return repository.contarCantores();
 	}
 
-	@GetMapping("/estatisticas/jogadores")
+	@GetMapping("/jogadores")
 	public List<EstatisticaDto> contarJogadores() {
 		return repository.contarJogadores();
 	}
 
-	@GetMapping("/estatisticas/filmes")
+	@GetMapping("/filmes")
 	public List<EstatisticaDto> contarFilmes() {
 		return repository.contarFilmes();
 	}
 
-	@GetMapping("/estatisticas/materias")
+	@GetMapping("/materias")
 	public List<EstatisticaDto> contarMaterias() {
 		return repository.contarMaterias();
 	}
 
-	@GetMapping("/estatisticas/lugares")
+	@GetMapping("/lugares")
 	public List<EstatisticaDto> contarLugares() {
 		return repository.contarLugares();
 	}
 
-	@GetMapping("/estatisticas/marcas")
+	@GetMapping("/marcas")
 	public List<EstatisticaDto> contarMarcas() {
 		return repository.contarMarcas();
 	}
 
-	@GetMapping("/estatisticas/horas-sono")
+	@GetMapping("/horas-sono")
 	public List<EstatisticaSonoDto> contarHorasSono() {
 		return repository.contarHorasSono();
 	}

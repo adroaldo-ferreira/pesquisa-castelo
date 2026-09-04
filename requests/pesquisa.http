@@ -1,0 +1,75 @@
+### Buscar pesquisas
+GET http://localhost:8080/api/respostas
+
+### Coletar estatisticas
+GET http://localhost:8080/api/respostas/estatisticas
+
+
+### Coletar estatisticas jogos
+GET http://localhost:8080/api/respostas/jogos
+
+### Coletar estatisticas esportes
+GET http://localhost:8080/api/respostas/esportes
+
+### Coletar estatisticas viagens
+GET http://localhost:8080/api/respostas/viagens
+
+### Coletar estatisticas meme
+GET http://localhost:8080/api/respostas/meme
+
+### Coletar estatisticas calçados
+GET http://localhost:8080/api/respostas/calcados
+
+
+### Coletar estatisticas cantores
+GET http://localhost:8080/api/respostas/cantores
+
+### Coletar estatisticas jogadores
+GET http://localhost:8080/api/respostas/jogadores
+
+### Coletar estatisticas filmes
+GET http://localhost:8080/api/respostas/filmes
+
+### Coletar estatisticas materias
+GET http://localhost:8080/api/respostas/materias
+
+
+### Coletar estatisticas lugares
+GET http://localhost:8080/api/respostas/lugares
+
+### Coletar estatisticas marcas
+GET http://localhost:8080/api/respostas/marcas
+
+### Coletar estatisticas horas sono
+GET http://localhost:8080/api/respostas/horas-sono
+
+
+
+
+### Buscar pesquisa por id
+GET http://localhost:8080/api/respostas/1
+
+### Criar resposta
+POST http://localhost:8080/api/respostas
+Content-Type: application/json
+
+{
+  "nome": "Maria",
+  "idade": 21,
+  "esporteFavorito": "Futebol",
+  "jogoFavorito": "Minecraft"
+}
+
+### Atualizar resposta
+PUT http://localhost:8080/api/respostas/1
+Content-Type: application/json
+
+{
+  "nome": "Maria Silva",
+  "idade": 22,
+  "esporteFavorito": "Vôlei",
+  "jogoFavorito": "Fortnite"
+}
+
+### Excluir resposta
+DELETE http://localhost:8080/api/respostas/1
