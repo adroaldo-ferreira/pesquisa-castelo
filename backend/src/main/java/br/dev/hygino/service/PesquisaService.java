@@ -1,7 +1,7 @@
 package br.dev.hygino.service;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
@@ -45,10 +45,7 @@ public class PesquisaService {
 	}
 
 	@Transactional(readOnly = true)
-	public List<ResponsePesquisaDto> buscarTodas() {
-		return repository.findAll()
-				.stream()
-				.map(Pesquisa::toResponse)
-				.toList();
+	public Page<ResponsePesquisaDto> buscarTodas(Pageable pageable) {
+		return repository.findAll(pageable).map(Pesquisa::toResponse);
 	}
 }

@@ -41,3 +41,12 @@ export type PesquisaPage = {
   }
 }
 
+export type EstatisticaDescritiva = {
+  resposta: string;
+  quantidade: number;
+}
+
+export type EstatisticaNumerica = {
+  horas: number;
+  quantidade: number;
+}

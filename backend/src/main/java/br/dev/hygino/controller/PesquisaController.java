@@ -2,9 +2,13 @@ package br.dev.hygino.controller;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,12 +39,11 @@ public class PesquisaController {
 	}
 
 	@GetMapping
-	public ResponseEntity<List<ResponsePesquisaDto>> listar() {
-
-		return ResponseEntity.ok(service.buscarTodas());
+	public ResponseEntity<Page<ResponsePesquisaDto>> listar(Pageable pageable) {
+		return ResponseEntity.ok(service.buscarTodas(pageable));
 	}
 
-	@GetMapping("/jogos")
+	@GetMapping("/games")
 	public List<EstatisticaDto> contarJogosOnline() {
 		return repository.contarJogosOnline();
 	}
@@ -99,23 +102,28 @@ public class PesquisaController {
 	public List<EstatisticaSonoDto> contarHorasSono() {
 		return repository.contarHorasSono();
 	}
-	
+
 	@GetMapping("/estatisticas")
 	public EstatisticasPesquisaDto estatisticas() {
 
-	    return new EstatisticasPesquisaDto(
-	        repository.contarJogosOnline(),
-	        repository.contarEsportes(),
-	        repository.contarViagens(),
-	        repository.contarMemes(),
-	        repository.contarCalcados(),
-	        repository.contarCantores(),
-	        repository.contarJogadores(),
-	        repository.contarFilmes(),
-	        repository.contarMaterias(),
-	        repository.contarLugares(),
-	        repository.contarMarcas(),
-	        repository.contarHorasSono()
-	    );
+		return new EstatisticasPesquisaDto(
+				repository.contarJogosOnline(), 
+				repository.contarEsportes(),
+				repository.contarViagens(),
+				repository.contarMemes(),
+				repository.contarCalcados(),
+				repository.contarCantores(), 
+				repository.contarJogadores(), 
+				repository.contarFilmes(),
+				repository.contarMaterias(), 
+				repository.contarLugares(), 
+				repository.contarMarcas(),
+				repository.contarHorasSono());
+	}
+
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> remove(@PathVariable long id) {
+		this.repository.deleteById(id);
+		return ResponseEntity.noContent().build();
 	}
 }

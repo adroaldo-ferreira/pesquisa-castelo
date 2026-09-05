@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Cadastro } from './page/cadastro/cadastro';
 import { TabelaPesquisa } from './components/tabela-pesquisa/tabela-pesquisa';
+import { JogoOnline } from './page/jogo-online/jogo-online';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'tabela-pesquisa',
     component: TabelaPesquisa
+  },
+  {
+    path: 'game',
+    component: JogoOnline
   }
 ];
 

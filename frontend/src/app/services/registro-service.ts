@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BASE_URL } from '../app.routes';
-import { PesquisaPage, RequestPesquisaDto, ResponsePesquisaDto } from '../pesquisa-types';
+import { EstatisticaDescritiva, PesquisaPage, RequestPesquisaDto, ResponsePesquisaDto } from '../pesquisa-types';
 
 
 @Injectable({
@@ -31,6 +31,10 @@ export class RegistroService {
   }
 
   delete(id: number) {
-    this.http.delete<void>(`${BASE_URL}/respostas/${id}`);
+    return this.http.delete<void>(`${BASE_URL}/respostas/${id}`);
+  }
+
+  findGames(): Observable<EstatisticaDescritiva[]> {
+    return this.http.get<EstatisticaDescritiva[]>(`${BASE_URL}/respostas/games`);
   }
 }
