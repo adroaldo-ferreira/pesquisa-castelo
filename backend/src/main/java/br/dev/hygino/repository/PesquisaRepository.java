@@ -139,7 +139,7 @@ public interface PesquisaRepository extends JpaRepository<Pesquisa, Long> {
     	    )
     	    FROM Pesquisa p
     	    GROUP BY p.horasSono
-    	    ORDER BY p.horasSono
+    	    ORDER BY COUNT(p) DESC
     	""")
     	List<EstatisticaSonoDto> contarHorasSono();
 }

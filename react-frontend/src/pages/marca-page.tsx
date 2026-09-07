@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
+import { Table } from "../components/table";
+import { getList } from "../requests/get-list";
+import type { EstatisticaDescritiva } from "../types/api-requests";
 export function MarcaPage() {
+    const [lista, setLista] = useState<EstatisticaDescritiva[]>([]);
+
+    useEffect(() => {
+        getList("marcas").then(setLista);
+    }, []);
+
     return (
-        <div>
-            <h1>Marca</h1>
-        </div>
-    )
+        <>
+            <div className="container">{Table("Marcas", lista)}</div>
+        </>
+    );
 }

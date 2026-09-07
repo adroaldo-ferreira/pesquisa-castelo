@@ -1,7 +1,7 @@
+import { PaginaNumerica } from "./pagina-numerica";
+
 export function SonoPage() {
-    return (
-        <div>
-            <h1>Sono</h1>
-        </div>
-    )
+  return (
+    <PaginaNumerica titulo="Horas de sono" endpoint="horas-sono" nomeCampo="Horas de sono" />
+  );
 }
