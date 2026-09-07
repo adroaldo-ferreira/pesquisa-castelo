@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getNumericList } from "../../requests/get-list";
+import { getNumericList } from "../../services/pesquisa-service";
 import type { EstatisticaNumerica } from "../../types/api-requests";
 
 interface PaginaNumericaProps {
