@@ -12,7 +12,7 @@ import { LugarPage } from "./pages/lugar-page";
 import { MarcaPage } from "./pages/marca-page";
 import { MateriaPage } from "./pages/materia-page";
 import { MemePage } from "./pages/meme-page";
-import { RelatorioPesquisa } from "./pages/realtorio-pesquisa";
+import { RelatorioPesquisa } from "./pages/relatorio-pesquisa";
 import { SonoPage } from "./pages/sono-page";
 import { ViagemPage } from "./pages/viagem-page";
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getNumericList } from "../../services/pesquisa-service";
-import type { EstatisticaNumerica } from "../../types/api-requests";
+import { getNumericList } from "../../../services/pesquisa-service";
+import type { EstatisticaNumerica } from "../../../types/api-requests";
 
 interface PaginaNumericaProps {
   titulo: string;

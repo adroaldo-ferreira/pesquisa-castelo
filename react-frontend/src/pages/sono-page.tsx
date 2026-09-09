@@ -1,4 +1,4 @@
-import { PaginaNumerica } from "./pagina-numerica";
+import { PaginaNumerica } from "./models/pagina-numerica";
 
 export function SonoPage() {
   return (

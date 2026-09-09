@@ -1,4 +1,4 @@
-import { PaginaDescritiva } from "./pagina-descritiva";
+import { PaginaDescritiva } from "./models/pagina-descritiva";
 
 export function CantorPage() {
   return (

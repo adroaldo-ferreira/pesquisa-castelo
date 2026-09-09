@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getList } from "../../services/pesquisa-service";
-import type { EstatisticaDescritiva } from "../../types/api-requests";
+import { getList } from "../../../services/pesquisa-service";
+import type { EstatisticaDescritiva } from "../../../types/api-requests";
 
 interface PaginaDescritivaProps {
     titulo: string;
