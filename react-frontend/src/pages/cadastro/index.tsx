@@ -2,7 +2,7 @@ import { useState } from "react";
 import { insertReport } from "../../services/pesquisa-service";
 
 export function Cadastro() {
-    const [cadastro, setCadastro] = useState({
+    const valorInicial = {
         jogoOnlineFavorito: "",
         esporteFavorito: "",
         viagemDosSonhos: "",
@@ -15,7 +15,9 @@ export function Cadastro() {
         lugarFavorito: "",
         marcaPreferida: "",
         horasSono: 0,
-    });
+    };
+
+    const [cadastro, setCadastro] = useState(valorInicial);
 
     const handleChange = (
         event: React.ChangeEvent<HTMLInputElement>
@@ -28,15 +30,20 @@ export function Cadastro() {
         }));
     };
 
-    const salvarPesquisa = (event: React.FormEvent<HTMLFormElement>) => {
+    const salvarPesquisa = async (
+        event: React.FormEvent<HTMLFormElement>
+    ) => {
         event.preventDefault();
 
-        const response = insertReport(cadastro);
-        console.log("Response:", response);
+        try {
+            const response = await insertReport(cadastro);
 
-        // Aqui você pode chamar a API
-        // exemplo:
-        // postPesquisa(cadastro);
+            console.log("Response:", response);
+
+            setCadastro(valorInicial);
+        } catch (error) {
+            console.error("Erro ao cadastrar pesquisa:", error);
+        }
     };
 
     return (
