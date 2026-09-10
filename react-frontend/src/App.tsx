@@ -15,6 +15,7 @@ import { MemePage } from "./pages/meme-page";
 import { RelatorioPesquisa } from "./pages/relatorio-pesquisa";
 import { SonoPage } from "./pages/sono-page";
 import { ViagemPage } from "./pages/viagem-page";
+import { PieChartModel } from "./components/pie-chart-model";
 
 function App() {
   return (

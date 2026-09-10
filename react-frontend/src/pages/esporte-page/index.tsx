@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { PieChartModel } from "../../components/pie-chart-model";
 import { Table } from "../../components/table";
 import { getList } from "../../services/pesquisa-service";
 import type { EstatisticaDescritiva } from "../../types/api-requests";
@@ -13,6 +14,7 @@ export function EsportePage() {
   return (
     <>
       <div className="container">{Table("Esportes", lista)}</div>
+      <PieChartModel title="Esportes" data={lista} />
     </>
   );
 }
